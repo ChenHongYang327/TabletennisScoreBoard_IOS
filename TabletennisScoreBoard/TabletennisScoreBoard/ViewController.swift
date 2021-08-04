@@ -41,7 +41,7 @@ class ViewController: UIViewController {
         }else{
             // 刪掉最後一個
             stepList.removeLast()
-            // 拿最後一個物件回復
+            // 拿最後一個物件
             let step = stepList.last
             tvScore1.text = step?.score1 ?? "0"
             tvScore2.text = step?.score2 ?? "0"
@@ -199,8 +199,9 @@ class ViewController: UIViewController {
         totalCount = 0
         playerDeuce = false
         
-        //紀錄step
+        // 紀錄step
         let step = Tabletennis(score1: tvScore1.text!, score2: tvScore2.text!, board1: tvBoard1.text!, board2: tvBoard2.text!, serve1: tvServe1.text!, serve2: tvServe2.text!, count1: count1, count2: count2, boad1: board1, boad2: board2, totalcount: totalCount, playerDeuce: playerDeuce)
+        // 存到陣列裡
         stepList.append(step)
     }
     
